@@ -1,0 +1,21 @@
+"*":
+  "base16-syntax":
+    scheme: "Ocean"
+  core:
+    customFileTypes:
+      "text.html.basic": [
+        "vue"
+      ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "base16-syntax"
+    ]
+  editor:
+    fontFamily: "SF Mono"
+    fontSize: 12
+    scrollPastEnd: true
+  "linter-ui-default": {}
+  "tree-view": {}
+  welcome:
+    showOnStartup: false

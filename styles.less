@@ -1,0 +1,60 @@
+//
+// # Editor
+// =============================================================================
+
+atom-text-editor.editor {
+  // fading cursor
+  .cursor {
+    transition: opacity 0.125s ease-in-out;
+  }
+
+  // thicker wrap guide
+  .wrap-guide {
+    width: 2px;
+  }
+
+  // thicker bracket matcher
+  .bracket-matcher .region {
+    border-width: 2px;
+  }
+
+  // fancy indent guides
+  .indent-guide {
+    position: relative;
+    box-shadow: initial;
+
+    &::before {
+      position: absolute;
+      top: 2px;
+      bottom: 2px;
+      border-left: solid 2px;
+      content: '';
+    }
+  }
+
+  // remove code folding icon
+  .icon-right::before {
+    display: none;
+  }
+
+  // fix atom-linter gutter
+  .line-number {
+    padding-right: 1em;
+  }
+  [gutter-name='linter'] {
+    width: 1em; // ensure the gutter doesn't grow
+    margin-left: -1em;
+  }
+  .custom-decorations {
+    background: none !important; // background style is inline so we have to use important to override
+  }
+}
+
+//
+// # Tree
+// =============================================================================
+
+// colorized folder icons that don't interfere wtih git integration colors
+:not(.status-added):not(.status-modified) > .list-item .icon-file-directory::before {
+  color: rgb(82, 139, 255);
+}
